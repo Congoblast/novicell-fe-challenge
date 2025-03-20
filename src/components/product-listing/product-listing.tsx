@@ -1,6 +1,6 @@
 import React from "react";
 import { useProductContext } from "../../providers/products-data-provider";
-import ProductCard from "./product-card";
+import ProductCard from "./product-card/product-card";
 import styled from "styled-components";
 import { Skeleton } from "../skeletons/skeleton";
 

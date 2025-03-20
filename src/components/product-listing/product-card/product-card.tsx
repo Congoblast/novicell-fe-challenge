@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { Product } from "../../types/productTypes";
+import { Product } from "../../../types/productTypes";
 import ProductInfo from "./product-info";
-import ProductCardImage from "./product-card-image";
+import ProductImage from "./product-image";
 
 interface Props {
   /**
@@ -23,7 +23,7 @@ const ProductCard: React.FC<Props> = ({ product }) => {
 
   return (
     <Root>
-      <ProductCardImage image={image} title={title} />
+      <ProductImage image={image} title={title} />
 
       <ProductInfo title={title} category={category} price={price}></ProductInfo>
     </Root>

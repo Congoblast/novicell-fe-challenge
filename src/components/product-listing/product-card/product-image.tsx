@@ -13,7 +13,7 @@ interface Props {
 /**
  * Product card for the plp listing
  */
-const ProductCardImage: React.FC<Props> = (props) => {
+const ProductImage: React.FC<Props> = (props) => {
   const { image, title } = props;
 
   /**
@@ -43,4 +43,4 @@ const Image = styled.img`
   max-height: 90%;
 `;
 
-export default ProductCardImage;
+export default ProductImage;
