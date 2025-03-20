@@ -31,6 +31,7 @@ const ProductCard: React.FC<Props> = ({ product }) => {
 };
 
 const Root = styled.div`
+  width: 100%;
   background-color: #f7f7f7;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
@@ -45,10 +46,6 @@ const Root = styled.div`
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  }
-
-  @media screen and (max-width: 600px) {
-    width: 90%;
   }
 `;
 

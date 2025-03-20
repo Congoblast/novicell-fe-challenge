@@ -6,7 +6,6 @@ interface Props {
    * The specific product title
    */
   title: string;
-
   /**
    * The category text
    */
@@ -28,7 +27,7 @@ const ProductInfo: React.FC<Props> = (props) => {
     <Root>
       <Title>{title}</Title>
       <Category>{category}</Category>
-      <Price>${price.toFixed(2)}</Price>
+      <Price>{price.toFixed(2)},-</Price>
     </Root>
   );
 };

@@ -6,19 +6,17 @@ interface Props {
    * The specific product details
    */
   image: string;
-
+  /**
+   * The specific products name
+   */
   title: string;
 }
 
 /**
- * Product card for the plp listing
+ * Renders the poducts image for the product card
  */
 const ProductImage: React.FC<Props> = (props) => {
   const { image, title } = props;
-
-  /**
-   * TODO: Handle a propper loading state so each card is loading individually
-   */
 
   return (
     <Root>

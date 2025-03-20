@@ -3,10 +3,19 @@ import styled from "styled-components";
 import { Product } from "../../types/productTypes";
 
 interface Props {
+  /**
+   * The list of products
+   */
   products: Product[];
+  /**
+   * Current index number on the carousel
+   */
   currentIndex: number;
 }
 
+/**
+ * Displays the image on the hero carousel
+ */
 const HeroImage: React.FC<Props> = (props) => {
   const { products, currentIndex } = props;
 
@@ -27,13 +36,16 @@ const Wrapper = styled.div`
   display: flex;
   flex: 1;
   justify-content: center;
+
   overflow: hidden;
 `;
 
 const ImageTrack = styled.div`
   display: flex;
+
   width: 100%;
   max-height: 350px;
+
   transition: transform 0.5s ease-in-out;
 `;
 
@@ -42,6 +54,7 @@ const ImageWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
   width: 100%;
   height: 200px;
 `;

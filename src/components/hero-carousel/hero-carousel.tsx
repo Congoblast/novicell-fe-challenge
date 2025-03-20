@@ -48,6 +48,7 @@ const HeroCarousel: React.FC = () => {
 const Root = styled.div`
   display: flex;
   justify-content: center;
+  padding-bottom: 20px;
 `;
 
 const Slider = styled.button`

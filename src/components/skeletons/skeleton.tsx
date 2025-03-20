@@ -1,6 +1,9 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 
+/**
+ * Shows a simple loading skeleton state
+ */
 export const Skeleton: React.FC = () => {
   return (
     <SkeletonWrapper>
