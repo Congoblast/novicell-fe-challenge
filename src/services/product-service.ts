@@ -14,7 +14,7 @@ export const fetchProducts = async (): Promise<Product[]> => {
 
     return result;
   } catch (err) {
-    console.error("Error fetching champion rank:", err);
+    console.error("Error fetching products list:", err);
     throw err;
   }
 };

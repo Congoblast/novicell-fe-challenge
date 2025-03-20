@@ -1,14 +1,15 @@
-import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import { HeroBanner } from "./components/heroBanner/heroBanner";
-import { ProductDataProvider } from "./providers/productDataProvider";
+import { FrontPage } from "./pages/front-page";
 
 function App() {
   return (
     <div className="App">
-      <ProductDataProvider>
-        <HeroBanner />
-      </ProductDataProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<FrontPage />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

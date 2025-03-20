@@ -1,8 +1,8 @@
 import { createContext, PropsWithChildren, useContext, useEffect, useState } from "react";
-import { fetchProducts } from "../services/products";
+import { fetchProducts } from "../services/product-service";
 import { Product } from "../types/productTypes";
 
-interface ProductListContextType {
+interface ProductContextType {
   /**
    * Boolean to determine if the data is loading
    */
@@ -12,11 +12,12 @@ interface ProductListContextType {
    */
   products: Product[];
   /**
-   * Boolean to determine if the call returns an error
+   * Boolean to determine if an error has occoured
    */
   isError: boolean;
 }
-export const ProductContext = createContext<ProductListContextType>({} as ProductListContextType);
+
+const ProductContext = createContext<ProductContextType>({} as ProductContextType);
 
 export const ProductDataProvider: React.FC<PropsWithChildren> = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -41,7 +42,7 @@ export const ProductDataProvider: React.FC<PropsWithChildren> = ({ children }) =
     fetchProduct();
   }, []);
 
-  const contextValue: ProductListContextType = {
+  const contextValue: ProductContextType = {
     products,
     isLoading,
     isError,
